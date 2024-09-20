@@ -29,6 +29,13 @@
         <baseImage>openjdk:8-jdk-alpine</baseImage>
         <imageName>example</imageName>
       </configuration>
+        <dependencies>
+                    <dependency>
+                        <groupId>javax.activation</groupId>
+                        <artifactId>activation</artifactId>
+                        <version>1.1.1</version>
+                    </dependency>
+                </dependencies>
       </plugin>
     </plugins>
   </build>
