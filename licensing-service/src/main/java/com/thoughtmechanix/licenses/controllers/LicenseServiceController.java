@@ -16,7 +16,7 @@ public class LicenseServiceController {
     @Autowired
     private LicenseService licenseService;
 
-    @RequestMapping(value="/{licenseId}",method = RequestMethod.GET)
+    @RequestMapping(value="/{licenseId}",method = RequestMethod.GET )
     public License getLicenses( @PathVariable("organizationId") String organizationId,
                                 @PathVariable("licenseId") String licenseId) {
 
@@ -29,6 +29,7 @@ public class LicenseServiceController {
     }
 
     @RequestMapping(value="{licenseId}",method = RequestMethod.PUT)
+    @ResponseStatus(HttpStatus.CREATED)
     public String updateLicenses( @PathVariable("licenseId") String licenseId) {
         return String.format("This is the put");
     }
